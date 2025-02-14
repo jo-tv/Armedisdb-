@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>ARMEDIS</title>
+ <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+ <script src="https://kit.fontawesome.com/fb67a05d46.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="/css/pageStyle.css">
+
+
+</head>
+<body>
+ <!-- partial:navbar -->
+ <%- include('./components/navbar.ejs') %>
+ <!-- partial -->
+
+ <form action="/pannelEdit/<%= info._id %>?_method=DELETE" method="post">
+  <div class="modal">
+   <p class="message">
+    Êtes-vous sûr de vouloir supprimer cet élément ?
+   </p>
+   <div class="options">
+    <button id="btn1" class="btn">No</button>
+    <button type="submit" class="btn">Yes</button>
+   </div>
+  </div>
+ </form>
+
+ <form action="/pannelEdit/<%=info._id %>?_method=PUT" method="post" class="form">
+  <p class="title">
+   ARMEDIS
+  </p>
+  <p class="message">
+   Ajout d'un nouveau produit
+  </p>
+  <div class="flex">
+   <label>
+    <input required="" placeholder="" type="number" class="input" name="BOUSSKOURA"
+    value="<%=info.BOUSSKOURA%>">
+    <span>BOUSSKOURA</span>
+   </label>
+
+   <label>
+    <input required="" placeholder="" type="number" class="input" name="MARRAKECH"
+    value="<%=info.MARRAKECH%>">
+    <span>MARRAKECH</span>
+   </label>
+
+   <label>
+    <input required="" placeholder="" type="number" class="input" name="TANGER" value="<%=info.TANGER%>">
+    <span>TANGER</span>
+   </label>
+
+  </div>
+
+  <div class="flex">
+   <label>
+    <input required="" placeholder="" type="number" class="input" name="AGADIR" value="<%=info.AGADIR%>">
+    <span>AGADIR</span>
+   </label>
+
+   <label>
+    <input required="" placeholder="" type="number" class="input" name="ZARKTOUNI"
+    value="<%=info.ZARKTOUNI%>">
+    <span>ZARKTOUNI</span>
+   </label>
+
+   <label>
+    <input required="" placeholder="" type="number" class="input" name="DARBOUAZA" value="<%=info.DARBOUAZA%>">
+    <span>DARBOUAZA</span>
+   </label>
+
+  </div>
+
+  <div class="flex">
+   <label>
+    <input required="" placeholder="" type="number" class="input" name="TEMARA" value="<%=info.TEMARA%>">
+    <span>TEMARA</span>
+   </label>
+
+   <label>
+    <input required="" placeholder="" type="number" class="input" name="MEKNES" value="<%=info.MEKNES%>">
+    <span>MEKNES</span>
+   </label>
+
+   <label>
+    <input required="" placeholder="" type="number" class="input" name="SOUKRATE"
+    value="<%=info.SOUKRATE%>">
+    <span>SOUKRATE</span>
+   </label>
+
+  </div>
+
+  <div class="flex">
+   <label>
+    <input required="" placeholder="" type="text" class="input" name="DATE" value="<%=info.DATE%>">
+    <span>DATE</span>
+   </label>
+
+  </div>
+
+
+  <button class="submit" type="submit">Edit</button>
+
+  <button id="btn2" class="submit" style="background:red;">Delete</button>
+  <p class="signin">
+   Voulez-vous retourner à ? :<a href="/">PageHome</a>
+  </p>
+ </form>
+
+ <script>
+  document.querySelector("#btn2").onclick = (e) => {
+   e.preventDefault()
+   document.querySelector(".modal").style.display = "block";
+  }
+
+  document.querySelector("#btn1").onclick = (e) => {
+   e.preventDefault()
+   document.querySelector(".modal").style.display = "none";
+  }
+ </script>
+
+ <script src="/js/modification.js"></script>
+</body>
+</html>

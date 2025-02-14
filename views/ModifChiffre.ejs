@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>ARMEDIS</title>
+ <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+ <script src="https://kit.fontawesome.com/fb67a05d46.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="css/ModifChiffre.css">
+
+</head>
+<body>
+ <!-- partial:navbar -->
+ <%- include('./components/navbar.ejs') %>
+ <!-- partial -->
+
+ <div class="container">
+  <table class="ml-table">
+   <thead>
+    <tr>
+     <th>Date Chiffre</th>
+     <th>Montant Total Magazin</th>
+     <th></th>
+    </tr>
+   </thead>
+   <tbody id="dataTable">
+    <% for (var x of result.reverse()) {
+     %>
+     <tr class="invalid">
+      <td data-label="Date Chiffre" id="cash" style="font-size:16px;"><%=x.DATE%></td>
+      <td class="important" data-label="Montant" style="font-size:16px;text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);"><%=
+       x.BOUSSKOURA +
+       x.MARRAKECH +
+       x.TANGER +
+       x.AGADIR +
+       x.ZARKTOUNI +
+       x.DARBOUAZA +
+       x.TEMARA +
+       x.MEKNES +
+       x.SOUKRATE;
+       %>,00 DH</td>
+
+      <td width="2">
+       <ul class="list-button">
+        <li class="list-button_item"><a href="/affiche/<%=x._id%>"><button style="font-size:20px"><i class="fa-solid fa-eye"></i>
+         <span class="button_info-title">Views</span></a></button></li>
+        <li class="list-button_item"><a href="/pannelEdit/<%=x._id%>"><button class="btn" style="font-size:20px"><i class="fa-solid
+         fa-pen-to-square"></i><span class="button_info-title">Edit</span></a></button></i></li>
+      </ul>
+     </td>
+    </tr>
+    <%}%>
+    </tbody>
+   </table>
+  </div>
+
+
+  <script src="js/modification.js"></script>
+ </body>
+</html>

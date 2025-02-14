@@ -1,0 +1,165 @@
+td input {
+    width: 50px;
+    text-align: center;
+    color: red;
+}
+#cmd {
+    background-color: gold;
+    color: green;
+    font-size: 16px;
+    text-align: center;
+}
+#stk {
+    background-color: green;
+    color: #fff;
+    font-size: 14px;
+}
+#tbl {
+    background-color: #f5fffa;
+    color: #000;
+    font-size: 16px;
+}
+
+#myTable {
+    width: 90%;
+    margin: 20px auto;
+    font-size: 12px;
+    font-weight: 900;
+}
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+#lib {
+    background: #778899;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 900;
+    font-family: Sans-Serif;
+    text-shadow: 4px 4px 6px rgba(66, 90, 87, 1);
+}
+
+/* From Uiverse.io by Creatlydev */
+.button {
+    line-height: 1;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0.75em 1em;
+    padding-right: 1.25em;
+    color: #fff;
+    border: 1px solid transparent;
+    font-weight: 700;
+    border-radius: 2em;
+    font-size: 1rem;
+    box-shadow: 0 0.7em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
+    transition: transform 0.3s;
+    background: linear-gradient(
+        90deg,
+        rgba(77, 54, 208, 1) 0%,
+        rgba(132, 116, 254, 1) 100%
+    );
+}
+
+.button__icon {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.button:hover {
+    border-color: #f4f5f2;
+}
+
+.button:active {
+    transform: scale(0.98);
+    box-shadow: 0 0.5em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
+}
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow:
+        rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.groupBtn {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* From Uiverse.io by LightAndy1 */
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+}
+
+.clear {
+    background: red;
+}
+.save {
+    background: green;
+}
+.print {
+    background: orange;
+}
+@media (max-width: 768px) {
+    table {
+        margin: 0 auto;
+        width: 100%;
+        zoom: 0.8;
+    }
+    .title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        box-shadow:
+            rgba(0, 0, 0, 0.3) 0px 19px 38px,
+            rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        position: relative;
+    }
+    .groupBtn {
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+    }
+    /* From Uiverse.io by LightAndy1 */
+}
+/* css file alert */
+
+@media print {
+    body {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    table {
+        page-break-inside: avoid; /* Prevent splitting tables across pages */
+        text-align: center;
+    }
+
+    thead {
+        display: table-header-group; /* Ensure table header appears on each page */
+    }
+
+    tbody tr {
+        page-break-inside: avoid; /* Prevent row splitting */
+    }
+}

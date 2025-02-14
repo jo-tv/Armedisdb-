@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Armedis</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="./css/pannel.css">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+ <nav id="nav-1">
+  <a class="link-1" href="/">D'Accueil</a>
+  <a class="link-1" href="/ModifChiffre">Reteur</a>
+  <a class="link-1" href="/login">Déconnexion</a>
+ </nav>
+ <!-- partial:index.partial.html -->
+ <div class="container ">
+  <header class="col-12 col-md-6 col-lg-4">
+   <h1>
+    <a href="#">
+     <img src="photo/1.png" alt="Authentic Collection">
+    </a>
+   </h1>
+  </header>
+  <h1 class="text-center">Pannel Chiffre</h1>
+  <form class="registration-form" action="/pannel" method="post">
+   <label class="col-one-half">
+    <span class="label-text">1-BOUSSKOURA</span>
+    <input type="number" name="BOUSSKOURA">
+   </label>
+   <label class="col-one-half">
+    <span class="label-text">2-MARRAKECH</span>
+    <input type="number" name="MARRAKECH">
+   </label>
+   <label class="col-one-half">
+    <span class="label-text">3-TANGER</span>
+    <input type="number" name="TANGER">
+   </label>
+   <label class="col-one-half">
+    <span class="label-text">4-AGADIR</span>
+    <input type="number" name="AGADIR">
+   </label>
+   <label class="col-one-half">
+    <span class="label-text">5-ZARKTOUNI</span>
+    <input type="number" name="ZARKTOUNI">
+   </label>
+   <label class="col-one-half">
+    <span class="label-text">7-DAR BOUAZA</span>
+    <input type="number" name="DARBOUAZA">
+   </label>
+   <label class="col-one-half">
+    <span class="label-text">8-SOUKRATE</span>
+    <input type="number" name="SOUKRATE">
+   </label>
+   <label class="col-one-half">
+    <span class="label-text">9-TEMARA</span>
+    <input type="number" name="TEMARA">
+   </label>
+   <label class="col-one-half">
+    <span class="label-text">10-MEKNES</span>
+    <input type="number" name="MEKNES">
+   </label>
+   <label class="col-one-half">
+    <span class="label-text">DATE</span>
+    <input id="Date" type="text" name="DATE" value="7372">
+   </label>
+   <div class="text-center">
+    <button class="submit" type="submit">Submit</button>
+   </div>
+  </form>
+ </div>
+ <!-- partial -->
+ <script>
+
+  function getCurrentDateFormatted() {
+   // إنشاء كائن تاريخ جديد (التاريخ الحالي)
+   const currentDate = new Date();
+
+   // استخراج السنة، الشهر، واليوم
+   const year = currentDate.getFullYear();
+   const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // إضافة 1 لأن الأشهر تبدأ من 0
+   const day = String(currentDate.getDate()).padStart(2, '0');
+
+   // صيغة التاريخ كـ YYYY-MM-DD
+   return `${year}-${month}-${day -1}`;
+  }
+
+  document.getElementById('Date').value = getCurrentDateFormatted();
+  // مثال على الاستخدام
+  // ناتج مثل: 2024-11-30
+ </script>
+</body>
+</html>

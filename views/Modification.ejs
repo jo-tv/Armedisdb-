@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>ARMEDIS</title>
+ <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+ <script src="https://kit.fontawesome.com/fb67a05d46.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="/css/pageStyle.css">
+
+
+</head>
+<body>
+ <!-- partial:navbar -->
+ <%- include('./components/navbar.ejs') %>
+ <!-- partial -->
+
+ <form action="/Modification/<%=arr._id%>?_method=DELETE" method="post">
+  <div class="modal">
+   <p class="message">
+    Êtes-vous sûr de vouloir supprimer cet élément ?
+   </p>
+   <div class="options">
+    <button id="btn1" class="btn">No</button>
+    <button type="submit" class="btn">Yes</button>
+   </div>
+  </div>
+ </form>
+ <form action="/Modification/<%= arr._id %>?_method=PUT" method="post" class="form">
+  <p class="title">
+   ARMEDIS
+  </p>
+  <p class="message">
+   Voulez-vous modifier ce produit ? : <span style="color:red ; font-size:14px ; margin-top:30px"><%=arr.libelle%></span>
+  </p>
+  <div class="flex">
+
+   <label>
+    <input type="text" class="input" value="<%=arr.gencode%>" name="gencode">
+    <span>GENCODE</span>
+   </l>
+  </div>
+
+  <label>
+   <input placeholder="" type="text" class="input" value="<%=arr.libelle%>" name="libelle">
+   <span>LIBELLE</span>
+  </label>
+
+  <label>
+   <input type="text" class="input" value="<%=arr.anpf%>" name="anpf">
+   <span>ANPF</span>
+  </label>
+
+  <label>
+   <input required="" placeholder="" type="text" class="input" id="inp-pass" name="reffourni" value="<%=arr.reffourni%>">
+   <span>Ref FOURNISSEUR</span>
+  </label>
+  <label>
+   <input required="" placeholder="" type="text" class="input" id="inp-cof" name="stock" value="<%=arr.stock%>">
+   <span>STOCK</span>
+  </label>
+
+  <p class="signin">
+   Voulez-vous retourner à :<a href="/">PageHome</a>
+  </p>
+
+  <button class="submit" type="submit">Submit</button>
+  <button id="btn2" class="submit" style="background:red;">Delete</button>
+ </form>
+ <script>
+  document.querySelector("#btn2").onclick = (e) => {
+   e.preventDefault()
+   document.querySelector(".modal").style.display = "block";
+  }
+
+  document.querySelector("#btn1").onclick = (e) => {
+   e.preventDefault()
+   document.querySelector(".modal").style.display = "none";
+  }
+ </script>
+
+
+ <script src="/js/modification.js"></script>
+</body>
+</html>

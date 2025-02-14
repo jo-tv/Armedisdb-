@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <script src="https://kit.fontawesome.com/fb67a05d46.js" crossorigin="anonymous"></script>
+ <title>teams</title>
+ <!-- Linking SwiperJS CSS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+ <link rel="stylesheet" href="css/team.css">
+
+</head>
+<body>
+ <div class="container swiper">
+  <a href="/"><button href="/" class="button" style="--clr: #7808d0">
+   <span class="button__icon-wrapper">
+    <svg
+     viewBox="0 0 14 15"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg"
+     class="button__icon-svg"
+     width="10"
+     >
+     <path
+      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+      fill="currentColor"
+      ></path>
+    </svg>
+
+    <svg
+     viewBox="0 0 14 15"
+     fill="none"
+     width="10"
+     xmlns="http://www.w3.org/2000/svg"
+     class="button__icon-svg button__icon-svg--copy"
+     >
+     <path
+      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+      fill="currentColor"
+      ></path>
+    </svg>
+   </span>
+   return PageHome
+  </button></a>
+
+  <div class="slider-wrapper">
+   <div class="card-list swiper-wrapper">
+    <div class="card-item swiper-slide">
+     <img src="./photo/2.png" alt="User Image" class="user-image">
+     <h2 class="user-name">Yassin</h2>
+     <p class="user-profession">
+      Responsable général.
+     </p>
+     <a href="https://wa.me/+212662-680625"><button class="message-button"><i class="fa-brands
+      fa-whatsapp" style="margin: 0 10px ;font-size:30px"></i>Message</button></a>
+    </div>
+
+    <div class="card-item swiper-slide">
+     <img src="./photo/2.png" alt="User Image" class="user-image">
+     <h2 class="user-name">Fahd</h2>
+     <p class="user-profession">
+      Responsable des marchandises.
+     </p>
+     <a href="https://wa.me/+212637-226263"><button class="message-button"><i class="fa-brands
+      fa-whatsapp" style="margin: 0 10px ;font-size:30px"></i>Message</button></a>
+    </div>
+
+    <div class="card-item swiper-slide">
+     <img src="./photo/2.png" alt="User Image" class="user-image">
+     <h2 class="user-name">Youssef</h2>
+     <p class="user-profession">
+      Animateur Mr Marrakech
+     </p>
+     <a href="https://wa.me/+212601862102"><button class="message-button"><i class="fa-brands
+      fa-whatsapp" style="margin: 0 10px ;font-size:30px"></i>Message</button></a>
+    </div>
+
+    <div class="card-item swiper-slide">
+     <img src="./photo/2.png" alt="User Image" class="user-image">
+     <h2 class="user-name">Simohamed</h2>
+     <p class="user-profession">
+      Animateur Mr Agadir
+     </p>
+     <a href="https://wa.me/+212611864816"><button class="message-button"><i class="fa-brands
+      fa-whatsapp" style="margin: 0 10px ;font-size:30px"></i>Message</button></a>
+    </div>
+
+    <div class="card-item swiper-slide">
+     <img src="./photo/2.png" alt="User Image" class="user-image">
+     <h2 class="user-name">Hamid</h2>
+     <p class="user-profession">
+      Animateur Mr Bousskoura
+     </p>
+     <a href="https://wa.me/+212619791141"><button class="message-button"><i class="fa-brands
+      fa-whatsapp" style="margin: 0 10px ;font-size:30px"></i>Message</button></a>
+    </div>
+
+    <div class="card-item swiper-slide">
+     <img src="./photo/2.png" alt="User Image" class="user-image">
+     <h2 class="user-name">Mohsin</h2>
+     <p class="user-profession">
+      Animateur Mr Tanger
+     </p>
+     <a href="https://wa.me/+212659359683"><button class="message-button"><i class="fa-brands
+      fa-whatsapp" style="margin: 0 10px ;font-size:30px"></i>Message</button></a>
+    </div>
+   </div>
+
+   <div class="swiper-pagination"></div>
+   <div class="swiper-slide-button swiper-button-prev"></div>
+   <div class="swiper-slide-button swiper-button-next"></div>
+  </div>
+ </div>
+
+ <!-- Linking SwiperJS script -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+ <!-- Linking custom script -->
+ <script>
+
+  const swiper = new Swiper('.slider-wrapper', {
+   loop: true,
+   grabCursor: true,
+   spaceBetween: 30,
+
+   // Pagination bullets
+   pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true
+   },
+
+   // Navigation arrows
+   navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+   },
+
+   // Responsive breakpoints
+   breakpoints: {
+    0: {
+     slidesPerView: 1
+    },
+    768: {
+     slidesPerView: 2
+    },
+    1024: {
+     slidesPerView: 3
+    }
+   }
+  });
+ </script>
+</body>
+</html>

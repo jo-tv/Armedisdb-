@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>ARMEDIS</title>
+ <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+ <script src="https://kit.fontawesome.com/fb67a05d46.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="/css/pageStyle.css">
+ <link rel="stylesheet" href="/css/afficheur.css">
+
+</head>
+<body>
+ <!-- partial:navbar -->
+ <%- include('../components/navbar2.ejs') %>
+ <!-- partial -->
+
+ <table>
+  <thead>
+   <tr>
+    <th>Magazin</th>
+    <th>Chiffre</th>
+    <th>Date Chiffre</th>
+
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td>BOUSSKOURA</td>
+    <td><%=arr.BOUSSKOURA%>,00 DH</td>
+    <td><%=arr.DATE%></td>
+
+   </tr>
+   <tr>
+    <td>MARRAKECH</td>
+    <td><%=arr.MARRAKECH%>,00 DH</td>
+    <td><%=arr.DATE%></td>
+
+   </tr>
+   <tr>
+    <td>TANGER </td>
+    <td><%=arr.TANGER%>,00 DH</td>
+    <td><%=arr.DATE%></td>
+   </tr>
+   <tr>
+    <td>AGADIR</td>
+    <td><%=arr.AGADIR%>,00 DH</td>
+    <td><%=arr.DATE%></td>
+
+   </tr>
+   <tr>
+    <td>ZARKTOUNI</td>
+    <td><%=arr.ZARKTOUNI%>,00 DH</td>
+    <td><%=arr.DATE%></td>
+
+   </tr>
+   <tr>
+    <td>DAR BOUAZA</td>
+    <td><%=arr.DARBOUAZA%>,00 DH</td>
+    <td><%=arr.DATE%></td>
+
+   </tr>
+   <tr>
+    <td>TEMARA</td>
+    <td><%=arr.TEMARA%>,00 DH</td>
+    <td><%=arr.DATE%></td>
+
+   </tr>
+   <tr>
+    <td>MEKNES</td>
+    <td><%=arr.MEKNES%>,00 DH</td>
+    <td><%=arr.DATE%></td>
+
+   </tr>
+   <tr>
+    <td>SOUKRATE</td>
+    <td><%=arr.SOUKRATE%>,00 DH</td>
+    <td><%=arr.DATE%></td>
+
+   </tr>
+   <tr>
+    <td>Total</td>
+    <td style="font-size:18x;color:red;font-weight:900;"><%=totalChiffre%>,00 DH</t>
+
+   </tr>
+  </tbody>
+ </table>
+ <script src="/js/modification.js"></script>
+</body>
+</html>

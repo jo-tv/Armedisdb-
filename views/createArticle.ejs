@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>ARMEDIS</title>
+ <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+ <script src="https://kit.fontawesome.com/fb67a05d46.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="/css/pageStyle.css">
+ 
+</head>
+<body>
+ <!-- partial:navbar -->
+ <%- include('./components/navbar.ejs') %>
+ <!-- partial -->
+ <form action="/createArticle" method="post" class="form">
+  <p class="title">
+   ARMEDIS
+  </p>
+  <p class="message">
+   Ajout d'un nouveau produit
+  </p>
+  <div class="flex">
+   <label>
+    <input required="" placeholder="" type="text" class="input" name="libelle">
+    <span>libelle</span>
+   </label>
+
+   <label>
+    <input required="" placeholder="" type="text" class="input" name="gencode">
+    <span>GENCODE</span>
+   </label>
+  </div>
+
+  <label>
+   <input required="" placeholder="" type="text" class="input" name="anpf">
+   <span>ANPF</span>
+  </label>
+
+  <label>
+   <input required="" placeholder="" type="text" class="input" id="inp-pass" name="reffourni">
+   <span>Ref FOURNISSEUR</span>
+  </label>
+  <label>
+   <input required="" placeholder="" type="text" class="input" id="inp-cof" name="stock">
+   <span>STOCK</span>
+  </label>
+  <button class="submit" type="submit">Submit</button>
+  <p class="signin">
+   Voulez-vous retourner à ? :<a href="/">PageHome</a>
+  </p>
+ </form>
+
+ <script src="js/modification.js"></script>
+</body>
+</html>
