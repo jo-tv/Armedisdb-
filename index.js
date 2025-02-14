@@ -12,6 +12,10 @@ var methodOverride = require("method-override");
 app.use(methodOverride("_method"));
 const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
+const path = require('path');
+app.set('views', path.join(__dirname, 'views')); 
+app.set('view engine', 'ejs');
+
 // الوصول إلى رابط قاعدة البيانات من متغيرات البيئة
 const dbURL = "mongodb+srv://josefmegane:mR47S2iaRxxR4ELS@cluster0.jmivy.mongodb.net/alldata?retryWrites=true&w=majority&appName=Armedis";
 
