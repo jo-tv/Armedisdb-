@@ -138,22 +138,24 @@ class="table  table-bordered border-primary "
 <th id="lib">GenCode</th>
 <th id="lib">Cmd</th>
 <th id="lib">ReF</thid>
-<th id="lib">Stock</t>
+<th id="lib">stock</t>
 </tr>
 </thead>
 <tbody>
 <% for (var x of data) {
+     if (x.stock >= 0) { 
 %>
 <tr>
-<td id="tbl"><%= x.libelle %></td >  
-<td id="tbl"><%= x.gencode %></td>
-<td id="cmd" onclick="editCell(this)">0</td>
-<td id="tbl"><%= x.reffourni%></t> 
-<td id="stk"><%= x.stock %></td >
-</tr >
-<%
-} %>
-
+  <td id="tbl"><%= x.libelle %></td>  
+  <td id="tbl"><%= x.gencode %></td>
+  <td id="cmd" onclick="editCell(this)">0</td>
+  <td id="tbl"><%= x.reffourni %></td> 
+  <td id="stk"><%= x.stock %></td>
+</tr>
+<% 
+    } // end if
+} // end for 
+%>
 </tbody>
 </table>
 <div class="alert">

@@ -79,6 +79,7 @@ class="table table-bordered border-primary  container"
 <th id="lib">ReF</thid>
 </tr>
 <% for (var x of data) {
+    if (x.stock > 0) { 
 %>
 <tr>
 <td><%= x.libelle %></td>
@@ -88,6 +89,7 @@ class="table table-bordered border-primary  container"
 <td><%= x.reffourni %></td>
 </tr>
 <%
+}
 } %>
 
 </thead>
